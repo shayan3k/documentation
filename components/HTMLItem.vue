@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template>
-  <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+  <tr class="bg-gray-800 border-b dark:bg-gray-800 dark:border-gray-700">
     <div v-if="item.seperator">
       <td colspan="2">
         <div class="px-6 py-4 text-bold text-xl">
@@ -20,7 +20,6 @@
     </td>
     <td class="px-6 py-4">
       {{ item.description }}
-
       <strong v-if="item.deprecated">(Not supported in HTML5)</strong>
     </td>
   </tr>
