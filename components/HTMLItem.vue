@@ -1,15 +1,7 @@
 <!-- Please remove this file from your project -->
 <template>
   <tr class="bg-gray-800 border-b dark:bg-gray-800 dark:border-gray-700">
-    <div v-if="item.seperator">
-      <td colspan="2">
-        <div class="px-6 py-4 text-bold text-xl">
-          {{ item.seperator }}
-        </div>
-      </td>
-    </div>
-
-    <td class="px-6 py-4 flex items-center" v-else>
+    <td class="px-6 py-4">
       {{ item.title
       }}<img
         v-if="item.html5"
@@ -21,6 +13,15 @@
     <td class="px-6 py-4">
       {{ item.description }}
       <strong v-if="item.deprecated">(Not supported in HTML5)</strong>
+    </td>
+
+    <td class="px-6 py-4">
+      <ul>
+        <li v-for="(el, index) in item.attributes" :key="index">
+          <strong> {{ el.name }} </strong>:
+          <span> {{ el.description }} </span>
+        </li>
+      </ul>
     </td>
   </tr>
 </template>
