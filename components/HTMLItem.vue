@@ -1,7 +1,7 @@
 <!-- Please remove this file from your project -->
 <template>
   <tr class="bg-gray-800 border-b dark:bg-gray-800 dark:border-gray-700">
-    <td class="px-6 py-4">
+    <td class="px-6 py-4 text-violet-400">
       {{ item.title
       }}<img
         v-if="item.html5"
@@ -10,7 +10,7 @@
         class="mx-1"
       />
     </td>
-    <td class="px-6 py-4">
+    <td class="px-6 py-4 text-orange-400">
       {{ item.description }}
       <strong v-if="item.deprecated">(Not supported in HTML5)</strong>
     </td>
@@ -18,7 +18,7 @@
     <td class="px-6 py-4">
       <ul>
         <li v-for="(el, index) in item.attributes" :key="index">
-          <strong> {{ el.name }} </strong>:
+          <strong class="text-red-400"> {{ el.name }} </strong>:
           <span> {{ el.description }} </span>
         </li>
       </ul>
