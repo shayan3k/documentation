@@ -1567,106 +1567,271 @@ const data = [
   {
     title: '<meter>',
     description:
-      '\n            It defines scalar measurement with known range or fractional\n            value.\n          ',
-    seperator: null,
+      'It defines scalar measurement with known range or fractional value.',
+    attributes: [
+      {
+        name: 'value',
+        description: 'Specifies the current value for the meter.',
+        value: 'number',
+      },
+      {
+        name: 'min',
+        description: 'Specifies the minimum value for the meter.',
+        value: 'number',
+      },
+      {
+        name: 'max',
+        description: 'Specifies the maximum value for the meter.',
+        value: 'number',
+      },
+      {
+        name: 'low',
+        description:
+          'Specifies the range that is considered to be a low value.',
+        value: 'number',
+      },
+      {
+        name: 'high',
+        description:
+          'Specifies the range that is considered to be a high value.',
+        value: 'number',
+      },
+      {
+        name: 'optimum',
+        description: 'Specifies the optimal value for the meter.',
+        value: 'number',
+      },
+    ],
+    separator: null,
     html5: true,
     deprecated: false,
   },
-
   {
     title: '<nav>',
-    description:
-      '\n            It represents section of page to represent navigation links.\n          ',
-    seperator: null,
+    description: 'It represents section of page to represent navigation links.',
+    attributes: [
+      {
+        name: 'accesskey',
+        description: 'Specifies a shortcut key to activate/focus an element.',
+        value: 'character',
+      },
+      {
+        name: 'role',
+        description: 'Specifies the role of the element.',
+        value: 'abstract',
+      },
+    ],
+    separator: null,
     html5: true,
     deprecated: false,
   },
   {
     title: '<noframes>',
     description:
-      '\n            It provides alternate content to represent in browser which does\n            not support the <frame> elements.\n            (Not supported in HTML5)',
-    seperator: null,
+      'It provides alternate content to represent in browser which does not support the <frame> elements. (Not supported in HTML5)',
+    attributes: null,
+    separator: null,
     html5: false,
     deprecated: true,
   },
   {
     title: '<noscript>',
     description:
-      '\n            It provides an alternative content if a script type is not\n            supported in browser.\n          ',
-    seperator: null,
+      'It provides an alternative content if a script type is not supported in browser.',
+    attributes: null,
+    separator: null,
     html5: false,
     deprecated: false,
   },
-
   {
     title: '<object>',
-    description:
-      '\n            It is used to embed an object in HTML file.\n          ',
-    seperator: null,
+    description: 'It is used to embed an object in HTML file.',
+    attributes: [
+      {
+        name: 'data',
+        description:
+          'Specifies the URL of the resource to be used by the object.',
+        value: 'URL',
+      },
+      {
+        name: 'type',
+        description: 'Specifies the MIME type of the resource.',
+        value: 'MIME_type',
+      },
+      {
+        name: 'width',
+        description: 'Specifies the width of the object.',
+        value: 'pixels',
+      },
+      {
+        name: 'height',
+        description: 'Specifies the height of the object.',
+        value: 'pixels',
+      },
+    ],
+    separator: null,
     html5: false,
     deprecated: false,
   },
   {
     title: '<ol>',
     description: 'It defines an ordered list of items.',
-    seperator: null,
+    attributes: [
+      {
+        name: 'start',
+        description: 'Specifies the start value of the ordered list.',
+        value: 'number',
+      },
+      {
+        name: 'type',
+        description: 'Specifies the kind of marker to use in the ordered list.',
+        value: '1|A|a|I|i',
+      },
+    ],
+    separator: null,
     html5: false,
     deprecated: false,
   },
   {
     title: '<optgroup>',
-    description:
-      '\n            It is used to group the options of a drop-down list.\n          ',
-    seperator: null,
+    description: 'It is used to group the options of a drop-down list.',
+    attributes: [
+      {
+        name: 'disabled',
+        description: 'Specifies that the option group is disabled',
+        value: 'disabled',
+      },
+      {
+        name: 'label',
+        description: 'Specifies a label for the option group',
+        value: 'text',
+      },
+    ],
+    separator: null,
     html5: false,
     deprecated: false,
   },
   {
     title: '<option>',
-    description:
-      '\n            It is used to define options or items in a drop-down list.\n          ',
-    seperator: null,
+    description: 'It is used to define options or items in a drop-down list.',
+    attributes: [
+      {
+        name: 'disabled',
+        description: 'Specifies that the option should be disabled',
+        value: 'disabled',
+      },
+      {
+        name: 'label',
+        description: 'Specifies a shorter label for the option',
+        value: 'text',
+      },
+      {
+        name: 'selected',
+        description: 'Specifies that the option should be pre-selected',
+        value: 'selected',
+      },
+      {
+        name: 'value',
+        description: 'Specifies the value to be sent to a server',
+        value: 'text',
+      },
+    ],
+    separator: null,
     html5: false,
     deprecated: false,
   },
   {
     title: '<output>',
     description:
-      '\n            It is used as container element which can show result of a\n            calculation.\n          ',
-    seperator: null,
+      'It is used as container element which can show result of a calculation.',
+    attributes: [
+      {
+        name: 'for',
+        description:
+          'Specifies the relationship between the result of the calculation and the elements used in the calculation',
+        value: 'IDREF',
+      },
+      {
+        name: 'form',
+        description:
+          'Specifies one or more forms the output element belongs to',
+        value: 'IDREFS',
+      },
+      {
+        name: 'name',
+        description: 'Specifies a name for the output element',
+        value: 'text',
+      },
+    ],
+    separator: null,
     html5: true,
+    deprecated: false,
+  },
+  {
+    title: '<p>',
+    description: 'It represents a paragraph in an HTML document.',
+    attributes: [
+      {
+        name: 'align',
+        description: 'Specifies the horizontal alignment of the element',
+        value: 'left|center|right|justify|char',
+      },
+    ],
+    separator: null,
+    html5: false,
     deprecated: false,
   },
 
   {
-    title: '<p>',
-    description:
-      '\n            It represents a paragraph in an HTML document.\n          ',
-    seperator: null,
-    html5: false,
-    deprecated: false,
-  },
-  {
     title: '<param>',
-    description:
-      '\n            It defines parameter for an <object> element\n          ',
-    seperator: null,
+    description: 'It defines parameter for an <object> element',
+    attributes: [
+      {
+        name: 'name',
+        description: 'Specifies name of the parameter',
+        value: 'text',
+      },
+      {
+        name: 'value',
+        description: 'Specifies value of the parameter',
+        value: 'text',
+      },
+    ],
+    separator: null,
     html5: false,
     deprecated: false,
   },
   {
     title: '<picture>',
     description:
-      '\n            It defines more than one source element and one image element.\n          ',
-    seperator: null,
+      'It defines more than one source element and one image element.',
+    attributes: [
+      {
+        name: 'srcset',
+        description: 'Specifies the URL of the image to use',
+        value: 'URL',
+      },
+      {
+        name: 'sizes',
+        description: 'Specifies the size of the image to use',
+        value: 'media_condition',
+      },
+      {
+        name: 'type',
+        description:
+          'Specifies the MIME type of the image. Required if the URL is a data URI',
+        value: 'MIME_type',
+      },
+    ],
+    separator: null,
     html5: true,
     deprecated: false,
   },
   {
     title: '<pre>',
-    description:
-      '\n            It defines preformatted text in an HTML document.\n          ',
-    seperator: null,
+    description: 'It defines preformatted text in an HTML document.',
+    attributes: null,
+    separator: null,
     html5: false,
     deprecated: false,
   },
@@ -1674,7 +1839,19 @@ const data = [
     title: '<progress>',
     description:
       '\n            It defines the progress of a task within HTML document.\n          ',
-    seperator: null,
+    attributes: [
+      {
+        name: 'value',
+        description: 'Specifies the current value of the progress',
+        value: 'number',
+      },
+      {
+        name: 'max',
+        description: 'Specifies the maximum value of the progress',
+        value: 'number',
+      },
+    ],
+    separator: null,
     html5: true,
     deprecated: false,
   },
@@ -1682,7 +1859,14 @@ const data = [
   {
     title: '<q>',
     description: 'It defines short inline quotation.',
-    seperator: null,
+    attributes: [
+      {
+        name: 'cite',
+        description: 'Specifies the source of the quotation',
+        value: 'url',
+      },
+    ],
+    separator: null,
     html5: false,
     deprecated: false,
   },
@@ -1691,97 +1875,300 @@ const data = [
     title: '<rp>',
     description:
       '\n            It defines an alternative content if browser does not supports\n            ruby annotations.\n          ',
-    seperator: null,
+    attributes: null,
+    separator: null,
     html5: true,
+    deprecated: false,
+  },
+
+  {
+    title: '<abbr>',
+    description: 'It defines an abbreviation for a phrase or longer word.',
+    attributes: [
+      {
+        name: 'title',
+        description: 'Specifies the full term',
+        value: 'text',
+      },
+    ],
+    separator: null,
+    html5: false,
     deprecated: false,
   },
   {
     title: '<rt>',
     description:
-      '\n            It defines explanations and pronunciations in ruby annotations.\n          ',
-    seperator: null,
+      'It defines explanations and pronunciations in ruby annotations.',
+    attributes: [],
+    separator: null,
     html5: false,
     deprecated: false,
   },
   {
     title: '<ruby>',
     description: 'It is used to represent ruby annotations.',
-    seperator: null,
+    attributes: [],
+    separator: null,
     html5: false,
     deprecated: false,
   },
-
   {
     title: '<s>',
-    description:
-      '\n            It render text which is no longer correct or relevant.\n          ',
-    seperator: null,
+    description: 'It render text which is no longer correct or relevant.',
+    attributes: [],
+    separator: null,
     html5: false,
     deprecated: false,
   },
   {
     title: '<samp>',
-    description:
-      '\n            It is used to represent sample output of a computer program.\n          ',
-    seperator: null,
+    description: 'It is used to represent sample output of a computer program.',
+    attributes: [],
+    separator: null,
     html5: false,
     deprecated: false,
   },
+
   {
     title: '<script>',
-    description:
-      '\n            It is used to declare the JavaScript within HTML document.\n          ',
-    seperator: null,
+    description: 'It is used to declare the JavaScript within HTML document.',
+    attributes: [
+      {
+        name: 'async',
+        description:
+          'Specifies that the script should be executed asynchronously',
+        value: null,
+      },
+      {
+        name: 'charset',
+        description: 'Specifies the character encoding used in the script',
+        value: 'character_encoding',
+      },
+      {
+        name: 'defer',
+        description:
+          'Specifies that the script should be executed after the page has been parsed',
+        value: null,
+      },
+      {
+        name: 'src',
+        description: 'Specifies the URL of the external script file',
+        value: 'URL',
+      },
+      {
+        name: 'type',
+        description: 'Specifies the MIME type of the script',
+        value: 'MIME_type',
+      },
+    ],
+    separator: null,
     html5: false,
     deprecated: false,
   },
   {
     title: '<section>',
-    description:
-      '\n            It defines a generic section for a document.\n          ',
-    seperator: null,
+    description: 'It defines a generic section for a document.',
+    attributes: [
+      {
+        name: 'accesskey',
+        description: 'Specifies a shortcut key to activate/focus an element',
+        value: 'character',
+      },
+      {
+        name: 'class',
+        description: 'Specifies one or more class names for an element',
+        value: 'classname',
+      },
+      {
+        name: 'contenteditable',
+        description:
+          'Specifies whether the content of an element is editable or not',
+        value: 'true/false',
+      },
+      {
+        name: 'data-*',
+        description:
+          'Used to store custom data private to the page or application',
+        value: 'value',
+      },
+      {
+        name: 'dir',
+        description:
+          'Specifies the text direction for the content in an element',
+        value: 'ltr/rtl/auto',
+      },
+      {
+        name: 'hidden',
+        description:
+          'Specifies that an element is not yet, or is no longer, relevant',
+        value: null,
+      },
+      {
+        name: 'id',
+        description: 'Specifies a unique id for an element',
+        value: 'id_name',
+      },
+      {
+        name: 'lang',
+        description: "Specifies the language of the element's content",
+        value: 'language_code',
+      },
+      {
+        name: 'spellcheck',
+        description:
+          'Specifies whether the element is to have its spelling and grammar checked or not',
+        value: 'true/false',
+      },
+      {
+        name: 'style',
+        description: 'Specifies an inline CSS style for an element',
+        value: 'CSS_style',
+      },
+      {
+        name: 'tabindex',
+        description: 'Specifies the tabbing order of an element',
+        value: 'number',
+      },
+      {
+        name: 'title',
+        description: 'Specifies extra information about an element',
+        value: 'text',
+      },
+    ],
+    separator: null,
     html5: true,
     deprecated: false,
   },
+
   {
     title: '<select>',
     description:
-      '\n            It represents a control which provides a menu of options.\n          ',
-    seperator: null,
+      '\n It represents a control which provides a menu of options.\n ',
+    attributes: [
+      {
+        name: 'autofocus',
+        description:
+          'Specifies that a drop-down list should automatically get focus when the page loads',
+        value: 'autofocus',
+      },
+      {
+        name: 'disabled',
+        description: 'Specifies that a drop-down list should be disabled',
+        value: 'disabled',
+      },
+      {
+        name: 'form',
+        description:
+          'Specifies one or more forms the drop-down list belongs to',
+        value: 'form_id',
+      },
+      {
+        name: 'multiple',
+        description: 'Specifies that multiple options can be selected at once',
+        value: 'multiple',
+      },
+      {
+        name: 'name',
+        description: 'Specifies a name for the drop-down list',
+        value: 'name',
+      },
+      {
+        name: 'required',
+        description:
+          'Specifies that the user is required to select a value before submitting the form',
+        value: 'required',
+      },
+      {
+        name: 'size',
+        description:
+          'Specifies the number of visible options in a drop-down list',
+        value: 'number',
+      },
+    ],
+    separator: null,
     html5: false,
     deprecated: false,
   },
+
   {
     title: '<small>',
     description:
-      '\n            It is used to make text font one size smaller than document?s base\n            font size.\n          ',
-    seperator: null,
+      '\n It is used to make text font one size smaller than document’s base\n font size.\n ',
+    attributes: [
+      {
+        name: 'none',
+        description: null,
+        value: null,
+      },
+    ],
+    separator: null,
     html5: false,
     deprecated: false,
   },
+
   {
-    title: '<source>>',
+    title: '<source>',
     description:
-      '\n            It defines multiple media recourses for different media element\n            such as <picture>, <video>, and <audio> element.\n          ',
-    seperator: null,
+      '\n It defines multiple media resources for different media elements\n such as <picture>, <video>, and <audio> element.\n ',
+    attributes: [
+      {
+        name: 'src',
+        description: 'Specifies the URL of the media file',
+        value: 'URL',
+      },
+      {
+        name: 'type',
+        description: 'Specifies the MIME type of the media file',
+        value: 'mime_type',
+      },
+      {
+        name: 'media',
+        description:
+          'Specifies a hint to the browser of what media query to evaluate the parent <picture> element against.',
+        value: 'media_query',
+      },
+    ],
+    separator: null,
     html5: true,
     deprecated: false,
   },
   {
     title: '<span>',
-    description:
-      '\n            It is used for styling and grouping inline.\n          ',
+    description: '\n It is used for styling and grouping inline.\n ',
     seperator: null,
     html5: false,
     deprecated: false,
+    attributes: [
+      {
+        name: 'class',
+        description: 'Specifies one or more class names for an element.',
+        value: 'classname',
+      },
+      {
+        name: 'id',
+        description: 'Specifies a unique id for an element.',
+        value: 'id_name',
+      },
+      {
+        name: 'style',
+        description: 'Specifies an inline CSS style for an element.',
+        value: 'CSS style declaration',
+      },
+      {
+        name: 'title',
+        description: 'Specifies extra information about an element.',
+        value: 'text',
+      },
+    ],
   },
   {
     title: '<strike>',
     description:
-      '\n            It is used to render strike through the text.\n            (Not supported in HTML5)',
+      '\n It is used to render strike through the text.\n (Not supported in HTML5)',
     seperator: null,
     html5: false,
     deprecated: true,
+    attributes: null,
   },
   {
     title: '<strong>',
@@ -1789,93 +2176,349 @@ const data = [
     seperator: null,
     html5: false,
     deprecated: false,
+    attributes: [
+      {
+        name: 'class',
+        description: 'Specifies one or more class names for an element.',
+        value: 'classname',
+      },
+      {
+        name: 'id',
+        description: 'Specifies a unique id for an element.',
+        value: 'id_name',
+      },
+      {
+        name: 'title',
+        description: 'Specifies extra information about an element.',
+        value: 'text',
+      },
+    ],
   },
+
   {
     title: '<style>',
     description:
-      '\n            It is used to contain style information for an HTML document.\n          ',
-    seperator: null,
+      'It is used to contain style information for an HTML document.',
+    attributes: [
+      {
+        name: 'type',
+        description: 'Specifies the type of stylesheet language',
+        value: 'text/css',
+      },
+      {
+        name: 'media',
+        description: 'Specifies the media device for the styled document',
+        value: 'media_query',
+      },
+    ],
+    separator: null,
     html5: false,
     deprecated: false,
   },
   {
     title: '<sub>',
-    description:
-      '\n            It defines a text which displays as a subscript text.\n          ',
-    seperator: null,
+    description: 'It defines a text which displays as a subscript text.',
+    attributes: [
+      {
+        name: 'none',
+        description: null,
+        value: null,
+      },
+    ],
+    separator: null,
     html5: false,
     deprecated: false,
   },
   {
     title: '<summary>',
-    description:
-      '\n            It defines summary which can be used with <details> tag.\n          ',
-    seperator: null,
+    description: 'It defines summary which can be used with <details> tag.',
+    attributes: [
+      {
+        name: 'none',
+        description: null,
+        value: null,
+      },
+    ],
+    separator: null,
     html5: true,
     deprecated: false,
   },
+
   {
     title: '<sup>',
-    description:
-      '\n            It defines a text which represent as superscript text.\n          ',
-    seperator: null,
+    description: 'It defines a text which represents as superscript text.',
+    attributes: [
+      {
+        name: 'none',
+        description: null,
+        value: null,
+      },
+    ],
+    separator: null,
     html5: false,
     deprecated: false,
   },
   {
     title: '<svg>',
     description:
-      '\n            It is used as container of SVG (Scalable Vector Graphics).\n          ',
-    seperator: null,
+      'It is used as a container for SVG (Scalable Vector Graphics).',
+    attributes: [
+      {
+        name: 'xmlns',
+        description: 'Defines the XML namespace for the document',
+        value: 'URL',
+      },
+      {
+        name: 'width',
+        description: 'Defines the width of the SVG viewport',
+        value: 'number | percentage',
+      },
+      {
+        name: 'height',
+        description: 'Defines the height of the SVG viewport',
+        value: 'number | percentage',
+      },
+      {
+        name: 'viewBox',
+        description: 'Defines the position and size of the viewport',
+        value: 'min-x min-y width height',
+      },
+    ],
+    separator: null,
+    html5: false,
+    deprecated: false,
+  },
+  {
+    title: '<table>',
+    description:
+      'It is used to present data in tabular form or to create a table within HTML document.',
+    attributes: [
+      {
+        name: 'border',
+        description: 'Specifies whether the table cells have borders or not',
+        value: '1 | 0',
+      },
+      {
+        name: 'cellpadding',
+        description: 'Specifies the padding within each table cell',
+        value: 'pixels',
+      },
+      {
+        name: 'cellspacing',
+        description: 'Specifies the spacing between adjacent table cells',
+        value: 'pixels',
+      },
+      {
+        name: 'width',
+        description: 'Specifies the width of the table',
+        value: 'pixels | percentage',
+      },
+    ],
+    separator: null,
     html5: false,
     deprecated: false,
   },
 
   {
-    title: '<table>',
-    description:
-      '\n            It is used to present data in tabular form or to create a table\n            within HTML document.\n          ',
-    seperator: null,
-    html5: false,
-    deprecated: false,
-  },
-  {
     title: '<tbody>',
     description:
-      '\n            It represents the body content of an HTML table and used along\n            with <thead> and <tfoot>.\n          ',
-    seperator: null,
+      'It represents the body content of an HTML table and is used along with <thead> and <tfoot>.',
+    attributes: [
+      {
+        name: 'align',
+        description:
+          'Specifies the horizontal alignment of the content within the table body',
+        value: 'left | center | right',
+      },
+      {
+        name: 'valign',
+        description:
+          'Specifies the vertical alignment of the content within the table body',
+        value: 'top | middle | bottom | baseline',
+      },
+    ],
+    separator: null,
     html5: false,
     deprecated: false,
   },
   {
     title: '<td>',
     description:
-      '\n            It is used to define cells of an HTML table which contains table\n            data\n          ',
-    seperator: null,
+      'It is used to define cells of an HTML table which contains table data.',
+    attributes: [
+      {
+        name: 'colspan',
+        description: 'Specifies the number of columns a cell should span',
+        value: 'number',
+      },
+      {
+        name: 'rowspan',
+        description: 'Specifies the number of rows a cell should span',
+        value: 'number',
+      },
+      {
+        name: 'headers',
+        description:
+          'Specifies one or more header cells a cell is associated with',
+        value: 'id1 id2 ...',
+      },
+      {
+        name: 'align',
+        description:
+          'Specifies the horizontal alignment of the content within the cell',
+        value: 'left | center | right',
+      },
+      {
+        name: 'valign',
+        description:
+          'Specifies the vertical alignment of the content within the cell',
+        value: 'top | middle | bottom | baseline',
+      },
+    ],
+    separator: null,
     html5: false,
     deprecated: false,
   },
   {
     title: '<template>',
     description:
-      '\n            It is used to contain the client side content which will not\n            display at time of page load and may render later using\n            JavaScript.\n          ',
-    seperator: null,
-    html5: false,
+      'It is used to contain the client-side content which will not display at the time of page load and may render later using JavaScript.',
+    attributes: [
+      {
+        name: 'content',
+        description:
+          'Specifies the content that will be used to create the template',
+        value: 'text',
+      },
+      {
+        name: 'name',
+        description:
+          'Specifies a name for the template that can be used to reference it later',
+        value: 'text',
+      },
+    ],
+    separator: null,
+    html5: true,
     deprecated: false,
   },
+
   {
     title: '<textarea>',
     description:
-      '\n            It is used to define multiple line input, such as comment,\n            feedback, and review, etc.\n          ',
-    seperator: null,
-    html5: false,
+      'It is used to define multiple line input, such as comment, feedback, and review, etc.',
+    attributes: [
+      {
+        name: 'autocomplete',
+        description:
+          'Specifies whether the textarea should have autocomplete enabled or not',
+        value: 'on/off',
+      },
+      {
+        name: 'autofocus',
+        description:
+          'Specifies that the textarea should automatically get focus when the page loads',
+        value: 'autofocus',
+      },
+      {
+        name: 'cols',
+        description:
+          'Specifies the visible width of a text area, in average character widths',
+        value: 'number',
+      },
+      {
+        name: 'dirname',
+        description: 'Specifies the direction of the text in the textarea',
+        value: 'ltr/rtl',
+      },
+      {
+        name: 'disabled',
+        description: 'Specifies that the textarea should be disabled',
+        value: 'disabled',
+      },
+      {
+        name: 'form',
+        description: 'Specifies the form the textarea belongs to',
+        value: 'form_id',
+      },
+      {
+        name: 'maxlength',
+        description:
+          'Specifies the maximum number of characters allowed in the textarea',
+        value: 'number',
+      },
+      {
+        name: 'name',
+        description: 'Specifies a name for the textarea',
+        value: 'text',
+      },
+      {
+        name: 'placeholder',
+        description:
+          'Specifies a short hint that describes the expected value of the textarea',
+        value: 'text',
+      },
+      {
+        name: 'readonly',
+        description: 'Specifies that the textarea should be read-only',
+        value: 'readonly',
+      },
+      {
+        name: 'required',
+        description:
+          'Specifies that the textarea is required (must be filled out)',
+        value: 'required',
+      },
+      {
+        name: 'rows',
+        description: 'Specifies the visible number of lines in a text area',
+        value: 'number',
+      },
+      {
+        name: 'wrap',
+        description:
+          'Specifies how the text in a textarea is to be wrapped when submitted in a form',
+        value: 'soft/hard',
+      },
+    ],
+    separator: null,
+    html5: true,
     deprecated: false,
   },
   {
     title: '<tfoot>',
-    description:
-      '\n            It defines the footer content of an HTML table.\n          ',
-    seperator: null,
+    description: 'It defines the footer content of an HTML table.',
+    attributes: [
+      {
+        name: 'align',
+        description:
+          'Specifies the horizontal alignment of the content in a table footer cell',
+        value: 'left/center/right/justify/char',
+      },
+      {
+        name: 'bgcolor',
+        description: 'Specifies the background color of a table footer cell',
+        value: 'color_name/color_code',
+      },
+      {
+        name: 'char',
+        description:
+          'Specifies the character to be used for the alignment character in a table footer cell',
+        value: 'char',
+      },
+      {
+        name: 'charoff',
+        description:
+          'Specifies the offset of the alignment character in a table footer cell',
+        value: 'number',
+      },
+      {
+        name: 'valign',
+        description:
+          'Specifies the vertical alignment of the content in a table footer cell',
+        value: 'top/middle/bottom/baseline',
+      },
+    ],
+    separator: null,
     html5: false,
     deprecated: false,
   },
