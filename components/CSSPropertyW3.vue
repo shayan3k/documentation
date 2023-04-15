@@ -2315,7 +2315,14 @@
 </template>
 
 <script>
+import cssData from '@/assets/data/css'
+
 export default {
   name: 'CSSPropertyW3',
+  data() {
+    return {
+      data: cssData,
+    }
+  },
 }
 </script>

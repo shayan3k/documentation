@@ -2524,89 +2524,200 @@ const data = [
   },
   {
     title: '<th>',
-    description:
-      '\n            It defines the head cell of an HTML table.\n          ',
-    seperator: null,
+    description: 'It defines the head cell of an HTML table.',
+    attributes: [
+      {
+        name: 'colspan',
+        description:
+          'Specifies the number of columns a header cell should span.',
+        value: 'number',
+      },
+      {
+        name: 'rowspan',
+        description: 'Specifies the number of rows a header cell should span.',
+        value: 'number',
+      },
+    ],
+    separator: null,
     html5: false,
     deprecated: false,
   },
   {
     title: '<thead>',
     description:
-      '\n            It defines the header of an HTML table. It is used along with\n            <tbody> and <tfoot> tags.\n          ',
-    seperator: null,
+      'It defines the header of an HTML table. It is used along with <tbody> and <tfoot> tags.',
+    attributes: [],
+    separator: null,
     html5: false,
     deprecated: false,
   },
   {
     title: '<time>',
-    description:
-      '\n            It is used to define data/time within an HTML document.\n          ',
-    seperator: null,
+    description: 'It is used to define data/time within an HTML document.',
+    attributes: [
+      {
+        name: 'datetime',
+        description: 'Specifies the date/time.',
+        value: 'YYYY-MM-DDThh:mm:ssTZD',
+      },
+    ],
+    separator: null,
     html5: true,
     deprecated: false,
   },
   {
     title: '<title>',
-    description:
-      '\n            It defines the title or name of an HTML document.\n          ',
-    seperator: null,
+    description: 'It defines the title or name of an HTML document.',
+    attributes: [],
+    separator: null,
     html5: false,
     deprecated: false,
   },
   {
     title: '<tr>',
     description: 'It defines the row cells in an HTML table',
-    seperator: null,
+    attributes: [
+      {
+        name: 'align',
+        description: 'Specifies the horizontal alignment of content in a cell.',
+        value: 'left, center, right',
+      },
+      {
+        name: 'valign',
+        description: 'Specifies the vertical alignment of content in a cell.',
+        value: 'top, middle, bottom, baseline',
+      },
+    ],
+    separator: null,
     html5: false,
     deprecated: false,
   },
+
   {
     title: '<track>',
     description:
-      '\n            It is used to define text tracks for <audio> and\n            <video> elements.\n          ',
-    seperator: null,
+      'It is used to define text tracks for <audio> and <video> elements.',
+    attributes: [
+      {
+        name: 'default',
+        description:
+          'Specifies that the track is to be enabled if the user’s preferences do not indicate that another track would be more appropriate.',
+        value: 'default',
+      },
+      {
+        name: 'kind',
+        description: 'Specifies the kind of text track.',
+        value: 'subtitles, captions, descriptions, chapters, metadata',
+      },
+      {
+        name: 'label',
+        description: 'Specifies a user-readable title of the text track.',
+        value: 'text',
+      },
+      {
+        name: 'src',
+        description: 'Specifies the URL of the text track file.',
+        value: 'URL',
+      },
+      {
+        name: 'srclang',
+        description: 'Specifies the language of the text track.',
+        value: 'language_code',
+      },
+    ],
+    separator: null,
     html5: false,
     deprecated: false,
   },
   {
     title: '<tt>',
-    description:
-      '\n            It is used to define teletype text.\n            (Not supported in HTML5)',
-    seperator: null,
+    description: 'It is used to define teletype text. (Not supported in HTML5)',
+    attributes: [],
+    separator: null,
     html5: false,
     deprecated: true,
   },
-
   {
     title: '<u>',
-    description:
-      '\n            It is used to render enclosed text with an underline.\n          ',
-    seperator: null,
+    description: 'It is used to render enclosed text with an underline.',
+    attributes: [],
+    separator: null,
     html5: false,
     deprecated: false,
   },
   {
     title: '<ul>',
-    description: 'It defines unordered list of items.',
-    seperator: null,
+    description: 'It defines an unordered list of items.',
+    attributes: [],
+    separator: null,
     html5: false,
     deprecated: false,
   },
-
   {
     title: '<var>',
     description:
-      '\n            It defines variable name used in mathematical or programming\n            context.\n          ',
-    seperator: null,
+      'It defines a variable name used in a mathematical or programming context.',
+    attributes: [],
+    separator: null,
     html5: false,
     deprecated: false,
   },
   {
     title: '<video>',
-    description:
-      '\n            It is used to embed a video content with an HTML document\n          ',
-    seperator: null,
+    description: 'It is used to embed a video content with an HTML document',
+    attributes: [
+      {
+        name: 'autoplay',
+        description:
+          'Specifies that the video will start playing as soon as it is ready.',
+        value: 'autoplay',
+      },
+      {
+        name: 'controls',
+        description:
+          'Specifies that video controls should be displayed (such as play/pause buttons, and so on).',
+        value: 'controls',
+      },
+      {
+        name: 'height',
+        description: 'Specifies the height of the video player.',
+        value: 'pixels',
+      },
+      {
+        name: 'loop',
+        description:
+          'Specifies that the video will start over again, every time it is finished.',
+        value: 'loop',
+      },
+      {
+        name: 'muted',
+        description:
+          'Specifies that the audio output of the video should be muted.',
+        value: 'muted',
+      },
+      {
+        name: 'poster',
+        description:
+          'Specifies an image to be shown while the video is downloading, or until the user hits the play button.',
+        value: 'URL',
+      },
+      {
+        name: 'preload',
+        description:
+          'Specifies if and how the author thinks the video should be loaded when the page loads.',
+        value: 'auto | metadata | none',
+      },
+      {
+        name: 'src',
+        description: 'Specifies the URL of the video file.',
+        value: 'URL',
+      },
+      {
+        name: 'width',
+        description: 'Specifies the width of the video player.',
+        value: 'pixels',
+      },
+    ],
     html5: true,
     deprecated: false,
   },
@@ -2614,8 +2725,8 @@ const data = [
   {
     title: '<wbr>',
     description:
-      '\n            It defines a position within text where break line is possible.\n          ',
-    seperator: null,
+      'It defines a position within text where break line is possible.',
+    attributes: null,
     html5: true,
     deprecated: false,
   },
