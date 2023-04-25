@@ -1,11 +1,22 @@
-version: '3.8'
+version: '3'
+
 services:
-  app:
-    build:
-      context: ./deploy
-      dockerfile: Dockerfile
+  webserver:
+    container_name: webserver
+    image: nginx:latest
     ports:
-      - '80:80'
-      - '443:443'
+      - 80:80
+      - 443:443
+    restart: always
     volumes:
-      - ./dist:/var/www/html
+      - ./nginx/conf/:/etc/nginx/conf.d/:ro
+      - ./certbot/www:/var/www/certbot/:ro
+      - ./certbot/conf/:/etc/nginx/ssl/:ro
+  certbot:
+    container_name: certbot
+    image: certbot/certbot:latest
+    command: certonly --webroot --webroot-path /var/www/certbot/ -d motalebi.me -m shayan3k@gmail.com --agree-tos --non-interactive
+    volumes:
+      - ./certbot/www/:/var/www/certbot/:rw
+      - ./certbot/conf/:/etc/letsencrypt/:rw
+      - ./certbot/log/:/var/log/letsencrypt/:rw
